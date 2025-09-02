@@ -23,18 +23,32 @@ class FormAutofiller {
 
     async loadData() {
         try {
-            const result = await chrome.storage.local.get(['resumeData', 'templateData', 'settingsData']);
-            this.resumeData = result.resumeData || {};
-            this.templateData = result.templateData || {};
-            this.settings = result.settingsData || {
+            const result = await chrome.storage.local.get([
+                'resumeData',
+                'templateData',
+                'settingsData'
+            ]);
+    
+            this.resumeData = (result && result.resumeData) ? result.resumeData : {};
+            this.templateData = (result && result.templateData) ? result.templateData : {};
+            this.settings = (result && result.settingsData) ? result.settingsData : {
                 autoDetect: true,
                 showButton: true,
                 confirmBeforeFill: false
             };
+    
         } catch (error) {
             console.error('Error loading data:', error);
+            // fallback defaults if storage completely fails
+            this.resumeData = {};
+            this.templateData = {};
+            this.settings = {
+                autoDetect: true,
+                showButton: true,
+                confirmBeforeFill: false
+            };
         }
-    }
+    }    
 
     setupFormDetection() {
         if (this.settings.autoDetect) {
