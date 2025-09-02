@@ -1,0 +1,11 @@
+{
+  "fullName": "John Doe",
+  "email": "john.doe@example.com",
+  "phone": "+1 (555) 123-4567",
+  "location": "San Francisco, CA",
+  "linkedin": "https://linkedin.com/in/johndoe",
+  "github": "https://github.com/johndoe",
+  "experience": "Senior Software Engineer at Tech Corp (2020-2023)\n• Led development of web applications using React and Node.js\n• Managed team of 5 developers and improved code quality\n• Improved application performance by 40% through optimization\n• Implemented CI/CD pipelines reducing deployment time by 60%\n\nSoftware Engineer at Startup Inc (2018-2020)\n• Built full-stack applications with Python and JavaScript\n• Collaborated with product team to deliver features on time\n• Participated in code reviews and technical discussions",
+  "education": "Bachelor of Science in Computer Science\nUniversity of California, Berkeley (2016-2020)\n• GPA: 3.8/4.0\n• Relevant coursework: Data Structures, Algorithms, Web Development, Database Systems\n• Senior Project: Built a real-time collaboration platform",
+  "skills": "Programming Languages: JavaScript (ES6+), Python, Java, SQL\nFrontend: React, Vue.js, HTML5, CSS3, SASS, TypeScript\nBackend: Node.js, Express, Python Flask, Django\nDatabases: PostgreSQL, MongoDB, Redis\nDevOps: Docker, Kubernetes, AWS, CI/CD, Git\nTools: VS Code, Postman, Jira, Figma"
+}

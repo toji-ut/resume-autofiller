@@ -1,0 +1,38 @@
+{
+  "name": "resume-autofiller",
+  "version": "1.0.0",
+  "description": "A Chrome extension that automatically fills out job application forms using your resume data",
+  "main": "background.js",
+  "scripts": {
+    "build": "echo 'Extension built successfully!'",
+    "dev": "echo 'Extension ready for development. Load as unpacked extension in Chrome.'",
+    "zip": "zip -r resume-autofiller.zip . -x '*.git*' 'node_modules/*' '*.DS_Store' '*.zip'",
+    "test": "echo 'No tests configured yet'",
+    "lint": "echo 'No linter configured yet'"
+  },
+  "keywords": [
+    "chrome-extension",
+    "resume",
+    "autofill",
+    "job-applications",
+    "productivity",
+    "automation"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/resume-autofiller.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/resume-autofiller/issues"
+  },
+  "homepage": "https://github.com/yourusername/resume-autofiller#readme",
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "Chrome >= 88"
+  ]
+}

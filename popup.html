@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Autofiller</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ Resume Autofiller</h1>
+            <p>Upload your resume and autofill job applications instantly!</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="resume">Resume</button>
+            <button class="tab-btn" data-tab="templates">Templates</button>
+            <button class="tab-btn" data-tab="settings">Settings</button>
+        </div>
+
+        <!-- Resume Tab -->
+        <div class="tab-content active" id="resume-tab">
+                    <div class="upload-section">
+            <h3>Upload Resume</h3>
+            <div class="coming-soon">
+                <p>📄 File upload feature coming soon!</p>
+                <p class="coming-soon-note">For now, please enter your information manually below.</p>
+            </div>
+        </div>
+
+        <div class="manual-input">
+                <h3>Or Enter Manually</h3>
+                <form id="resume-form">
+                    <div class="form-group">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" placeholder="John Doe">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" placeholder="+1 (555) 123-4567">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" placeholder="San Francisco, CA">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="linkedin">LinkedIn URL</label>
+                        <input type="url" id="linkedin" placeholder="https://linkedin.com/in/johndoe">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="github">GitHub URL</label>
+                        <input type="url" id="github" placeholder="https://github.com/johndoe">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="experience">Work Experience</label>
+                        <textarea id="experience" rows="4" placeholder="Software Engineer at Tech Corp (2020-2023)&#10;• Led development of web applications&#10;• Managed team of 5 developers"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="education">Education</label>
+                        <textarea id="education" rows="3" placeholder="Bachelor of Science in Computer Science&#10;University of California, Berkeley (2016-2020)"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="skills">Skills</label>
+                        <textarea id="skills" rows="3" placeholder="JavaScript, React, Node.js, Python, AWS, Docker"></textarea>
+                    </div>
+
+                    <button type="submit" class="save-btn">💾 Save Resume Data</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Templates Tab -->
+        <div class="tab-content" id="templates-tab">
+            <h3>Common Answer Templates</h3>
+            <div class="template-list">
+                <div class="template-item">
+                    <label for="why-job">Why do you want this job?</label>
+                    <textarea id="why-job" rows="3" placeholder="I'm passionate about..."></textarea>
+                </div>
+                
+                <div class="template-item">
+                    <label for="salary">Expected Salary</label>
+                    <input type="text" id="salary" placeholder="$80,000 - $100,000">
+                </div>
+                
+                <div class="template-item">
+                    <label for="visa">Visa Status</label>
+                    <input type="text" id="visa" placeholder="US Citizen">
+                </div>
+                
+                <div class="template-item">
+                    <label for="start-date">Earliest Start Date</label>
+                    <input type="text" id="start-date" placeholder="2 weeks notice">
+                </div>
+                
+                <div class="template-item">
+                    <label for="relocation">Willing to Relocate?</label>
+                    <input type="text" id="relocation" placeholder="Yes, open to relocation">
+                </div>
+            </div>
+            <button id="save-templates" class="save-btn">💾 Save Templates</button>
+        </div>
+
+        <!-- Settings Tab -->
+        <div class="tab-content" id="settings-tab">
+            <h3>Settings</h3>
+            <div class="setting-item">
+                <label>
+                    <input type="checkbox" id="auto-detect"> Auto-detect forms on job sites
+                </label>
+            </div>
+            <div class="setting-item">
+                <label>
+                    <input type="checkbox" id="show-button"> Show autofill button on forms
+                </label>
+            </div>
+            <div class="setting-item">
+                <label>
+                    <input type="checkbox" id="confirm-before-fill"> Ask for confirmation before filling
+                </label>
+            </div>
+            
+            <div class="data-actions">
+                <button id="export-data" class="action-btn">📤 Export Data</button>
+                <button id="import-data" class="action-btn">📥 Import Data</button>
+                <button id="clear-data" class="action-btn danger">🗑️ Clear All Data</button>
+            </div>
+        </div>
+
+        <div class="status-message" id="status-message"></div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
